@@ -1,0 +1,94 @@
+.page {
+  min-height: calc(100vh - 60px);
+  background: #FCFCFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+.card {
+  background: #F7F3EE;
+  border: 1px solid #E8E2D9;
+  border-radius: 6px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.sub {
+  color: #8A7F75;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111111;
+}
+
+.input {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #8A7F75;
+  border-radius: 3px;
+  background: #FCFCFA;
+  font-size: 0.95rem;
+  color: #111111;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  border-color: #C6A769;
+}
+
+.input::placeholder {
+  color: #8A7F75;
+}
+
+.btn {
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  background: #111111;
+  color: #FCFCFA;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn:hover { opacity: 0.8; }
+
+.footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #8A7F75;
+}
+
+.link {
+  color: #C6A769;
+  font-weight: 600;
+}
+
+.link:hover { opacity: 0.8; }
