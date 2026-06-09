@@ -1,14 +1,42 @@
 import { useState } from 'react';
+import { useNavigate, useSearchParams, Link } from 'react-router-dom';
 import styles from './Auth.module.css';
 
 export default function Register() {
   const [form, setForm] = useState({ name: '', email: '', password: '' });
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const next = searchParams.get('next') || '/home';
 
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    // API call goes here
+    setError('');
+    setLoading(true);
+
+    try {
+      const res = await fetch('http://localhost:4000/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || 'Something went wrong.');
+        return;
+      }
+
+      navigate(next);
+    } catch {
+      setError('Could not connect to the server. Is it running?');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -27,7 +55,6 @@ export default function Register() {
               value={form.name}
               onChange={handleChange}
               placeholder="Your name"
-              required
             />
           </label>
 
@@ -57,11 +84,15 @@ export default function Register() {
             />
           </label>
 
-          <button className={styles.btn} type="submit">Create account</button>
+          {error && <p className={styles.error}>{error}</p>}
+
+          <button className={styles.btn} type="submit" disabled={loading}>
+            {loading ? 'Creating account…' : 'Create account'}
+          </button>
         </form>
 
         <p className={styles.footer}>
-          Already have an account? <a href="/login" className={styles.link}>Log in</a>
+          Already have an account? <Link to="/login" className={styles.link}>Log in</Link>
         </p>
       </div>
     </div>

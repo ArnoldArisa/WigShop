@@ -1,0 +1,148 @@
+.page {
+  background: #FCFCFA;
+  min-height: calc(100vh - 60px);
+  padding: 2.5rem 0 5rem;
+}
+
+.back {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: #8A7F75;
+  margin-bottom: 2rem;
+}
+
+.back:hover { color: #111111; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.media { display: flex; flex-direction: column; gap: 0; }
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #E8E2D9;
+  margin-bottom: 0;
+}
+
+.tab {
+  padding: 0.6rem 1.25rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 0.9rem;
+  color: #8A7F75;
+  cursor: pointer;
+  margin-bottom: -1px;
+  transition: color 0.15s;
+}
+
+.tab:hover { color: #111111; }
+
+.tabActive {
+  color: #111111;
+  font-weight: 600;
+  border-bottom-color: #C6A769;
+}
+
+.image {
+  width: 100%;
+  border-radius: 0 0 6px 6px;
+  display: block;
+  object-fit: cover;
+}
+
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0 0 6px 6px;
+  border: none;
+  background: #111111;
+}
+
+.category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8A7F75;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #C6A769;
+  margin-bottom: 1rem;
+}
+
+.stockLabel { margin-bottom: 1.5rem; font-size: 0.875rem; }
+.inStock { color: #065F46; }
+.outOfStock { color: #DC2626; }
+
+.qtyRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.qtyLabel { font-size: 0.875rem; color: #111111; font-weight: 500; }
+
+.qtyControls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.qtyControls button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #8A7F75;
+  border-radius: 3px;
+  background: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #111111;
+}
+
+.qtyControls button:hover { border-color: #111111; }
+.qtyControls span { font-weight: 600; min-width: 24px; text-align: center; }
+
+.addBtn {
+  width: 100%;
+  padding: 0.9rem;
+  background: #111111;
+  color: #FCFCFA;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  margin-bottom: 1rem;
+}
+
+.addBtn:hover:not(:disabled) { opacity: 0.8; }
+.addBtn:disabled { opacity: 0.45; cursor: default; }
+
+.msg { font-size: 0.875rem; color: #065F46; }
+.error { color: #DC2626; margin-bottom: 1rem; }
+
+.viewCart {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #C6A769;
+}

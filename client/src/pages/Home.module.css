@@ -97,6 +97,19 @@
   color: #C6A769;
 }
 
+.viewAll {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.viewAllLink {
+  color: #111111;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.viewAllLink:hover { color: #C6A769; }
+
 /* About */
 .about {
   background: #E8E2D9;

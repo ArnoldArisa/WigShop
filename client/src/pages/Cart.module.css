@@ -1,0 +1,129 @@
+.page {
+  background: #FCFCFA;
+  min-height: calc(100vh - 60px);
+  padding: 3rem 0 5rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+.loading { color: #8A7F75; }
+
+.error {
+  color: #DC2626;
+  background: #FEE2E2;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem 0;
+  color: #8A7F75;
+}
+
+.shopLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #C6A769;
+  font-weight: 600;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F7F3EE;
+  border: 1px solid #E8E2D9;
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.itemName {
+  font-weight: 500;
+  color: #111111;
+  margin-bottom: 0.25rem;
+}
+
+.itemPrice { color: #8A7F75; font-size: 0.9rem; }
+
+.itemControls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.itemControls button {
+  background: #E8E2D9;
+  border: none;
+  border-radius: 3px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #111111;
+}
+
+.itemControls button:disabled { opacity: 0.4; cursor: default; }
+
+.itemControls span { font-weight: 600; min-width: 20px; text-align: center; }
+
+.removeBtn {
+  background: none !important;
+  width: auto !important;
+  height: auto !important;
+  color: #DC2626 !important;
+  font-size: 0.8rem !important;
+  padding: 0 0.25rem;
+}
+
+.summary {
+  background: #F7F3EE;
+  border: 1px solid #E8E2D9;
+  border-radius: 6px;
+  padding: 1.5rem;
+  position: sticky;
+  top: 80px;
+}
+
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #111111;
+  margin-bottom: 1.25rem;
+}
+
+.subtotal span { font-weight: 700; }
+
+.checkoutBtn {
+  display: block;
+  text-align: center;
+  background: #111111;
+  color: #FCFCFA;
+  padding: 0.85rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: opacity 0.15s;
+}
+
+.checkoutBtn:hover { opacity: 0.8; }

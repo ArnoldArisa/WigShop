@@ -35,3 +35,16 @@
 .nav a:hover {
   color: #C6A769;
 }
+
+.logoutBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #111111;
+  padding: 0;
+}
+
+.logoutBtn:hover {
+  color: #C6A769;
+}

@@ -1,0 +1,212 @@
+.page {
+  background: #FCFCFA;
+  min-height: calc(100vh - 60px);
+  padding: 3rem 0 5rem;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.02em;
+}
+
+.count { font-size: 0.9rem; color: #8A7F75; }
+
+/* Search */
+.searchWrap {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.search {
+  width: 100%;
+  padding: 0.65rem 2.5rem 0.65rem 1rem;
+  border: 1px solid #8A7F75;
+  border-radius: 4px;
+  background: #FCFCFA;
+  font-size: 0.95rem;
+  color: #111111;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.search:focus { border-color: #C6A769; }
+.search::placeholder { color: #8A7F75; }
+
+.searchClear {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #8A7F75;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0;
+}
+
+.searchClear:hover { color: #111111; }
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.categories {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.catBtn {
+  padding: 0.4rem 1rem;
+  border: 1px solid #8A7F75;
+  border-radius: 999px;
+  background: transparent;
+  color: #8A7F75;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.catBtn:hover { border-color: #111111; color: #111111; }
+
+.catActive { background: #111111; border-color: #111111; color: #FCFCFA; }
+.catActive:hover { background: #111111; color: #FCFCFA; }
+
+.toolbarRight { display: flex; align-items: center; gap: 0.75rem; }
+
+.sort {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #8A7F75;
+  border-radius: 3px;
+  background: #FCFCFA;
+  color: #111111;
+  font-size: 0.875rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.sort:focus { border-color: #C6A769; }
+
+.viewToggle { display: flex; border: 1px solid #8A7F75; border-radius: 3px; overflow: hidden; }
+
+.viewBtn {
+  padding: 0.35rem 0.6rem;
+  background: transparent;
+  border: none;
+  color: #8A7F75;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s;
+}
+
+.viewBtn:hover { background: #F7F3EE; color: #111111; }
+.viewActive { background: #111111; color: #FCFCFA; }
+.viewActive:hover { background: #111111; color: #FCFCFA; }
+
+.empty { color: #8A7F75; padding: 3rem 0; text-align: center; }
+
+/* Grid view */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #F7F3EE;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.15s;
+  display: block;
+}
+
+.card:hover { transform: translateY(-3px); }
+
+.cardImgWrap { position: relative; }
+
+.cardImg { width: 100%; display: block; object-fit: cover; }
+
+.outOfStockBadge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: #111111;
+  color: #FCFCFA;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.cardCategory {
+  font-size: 0.75rem;
+  color: #8A7F75;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+
+.cardName { font-size: 0.95rem; color: #111111; font-weight: 500; }
+
+.cardPrice { font-size: 0.95rem; font-weight: 600; color: #C6A769; white-space: nowrap; }
+
+/* List view */
+.list { display: flex; flex-direction: column; gap: 0; border: 1px solid #E8E2D9; border-radius: 4px; overflow: hidden; }
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.875rem 1rem;
+  background: #FCFCFA;
+  border-bottom: 1px solid #E8E2D9;
+  transition: background 0.15s;
+}
+
+.listItem:last-child { border-bottom: none; }
+.listItem:hover { background: #F7F3EE; }
+
+.listImg {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.listInfo { flex: 1; }
+
+.listName { font-size: 0.95rem; font-weight: 500; color: #111111; }
+
+.listRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
